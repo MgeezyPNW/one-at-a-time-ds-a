@@ -1,0 +1,25 @@
+{
+  "name": "one-at-a-time-ds-a",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithms Practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node array-shift.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelageorge/one-at-a-time-ds-a.git"
+  },
+  "author": "Michael George",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelageorge/one-at-a-time-ds-a/issues"
+  },
+  "homepage": "https://github.com/michaelageorge/one-at-a-time-ds-a#readme",
+  "dependencies": {
+    "eslint": "^5.15.1",
+    "jest": "^24.1.0"
+  }
+}
