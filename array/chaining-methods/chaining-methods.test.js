@@ -54,8 +54,8 @@ const divisibleByFiveTwoToThePower = (input) => {
         Math.pow(2, input[i][j]);
       }
     }
-  };
-}
+  }
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -138,6 +138,12 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
+  let shortest = data.filter(heights => {
+    if (heights.height === '96') {
+      return heights.name;
+    }
+  })
+  return shortest[0].name;
 };
 
 /* ------------------------------------------------------------------------------------------------
