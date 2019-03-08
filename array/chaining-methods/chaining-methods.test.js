@@ -48,14 +48,10 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-  for (let i = 0; i < input.length; i++) {
-    for (let j = 0; j < input[i].length; j++) {
-      if (input[i][j] % 5 === 0) {
-        Math.pow(2, input[i][j]);
-      }
-    }
-  }
+  let newArray = input.map(arrArray => arrArray.filter(filterArray => filterArray % 5 === 0 && typeof filterArray === 'number').map(mapArray => Math.pow(2, mapArray)));
+  return newArray;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -138,12 +134,8 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
-  let shortest = data.filter(heights => {
-    if (heights.height === '96') {
-      return heights.name;
-    }
-  })
-  return shortest[0].name;
+  let heights = data.filter(short => short.height === '96').map(shortest => shortest.name).reduce(shortestest => shortestest);
+  return heights;
 };
 
 /* ------------------------------------------------------------------------------------------------
