@@ -38,8 +38,10 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {
+const standardizePhoneNumbers = arr => {
   // Solution code here...
+  let regex = /[^0-9]+/gm;
+  return arr.map(array => array.replace(regex, ''));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,15 +66,14 @@ CHALLENGE 5
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
 
-const allHappy = (arr) => {
+const allHappy = arr => {
   // Solution code here...
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].includes(':)') === false) {
       return false;
-    } else {
-      return true;
     }
   }
+  return true;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,6 +83,13 @@ Write a function named findAnything that takes in an array of strings, along wit
 
 const findAnything = (arr, target) => {
   // Solution code here...
+  let results = [];
+  arr.filter(array => {
+    if (array.includes(target)) {
+      results.push(array);
+    }
+  });
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,6 +99,18 @@ Write a function named findEvery that takes in an array of strings, along with a
 
 const findEvery = (arr, target) => {
   // Solution code here...
+  let booleans = arr.map(array => { 
+    if (array.includes(target)) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  if(booleans.includes(false)) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,7 +122,12 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
+  let filtered = [];
   // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    filtered.push(arr[i].filter(array => !array.includes('Brook')));
+  }
+  return filtered;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,6 +151,16 @@ const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sat
 
 const sortByDay = (arr) => {
   // Solution code here...
+  let schedule = [
+    arr.filter(array => array.includes('Monday')),
+    arr.filter(array => array.includes('Tuesday')),
+    arr.filter(array => array.includes('Wednesday')),
+    arr.filter(array => array.includes('Thursday')),
+    arr.filter(array => array.includes('Friday')),
+    arr.filter(array => array.includes('Saturday')),
+    arr.filter(array => array.includes('Sunday')),
+  ]
+  return schedule;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,8 +169,13 @@ Write a function named characterByIndex that takes in an array of strings and re
 For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
-const characterByIndex = (arr) => {
+const characterByIndex = arr => {
   // Solution code here...
+  let count = -1;
+  return arr.map(array => {
+    count++;
+    return array[count];
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
