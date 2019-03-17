@@ -26,7 +26,7 @@ const forEachTwoToThe = (arr) => {
   let powerArr = [];
   arr.forEach(function(x) {
     powerArr.push(Math.pow(2, x));
-  })
+  });
   return powerArr;
 };
 
@@ -40,7 +40,7 @@ const mapTwoToThe = (arr) => {
   return arr.map(function (x) {
     return Math.pow(2, x);
   });
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -53,7 +53,7 @@ const charCode = function (arr) {
   return arr.map(function(idx) {
     return idx.charCodeAt();
   });
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -242,9 +242,9 @@ describe('Testing challenge 6', () => {
 describe('Testing challenge 7', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
-      { name: 'speed', total: 35, },
-      { name: 'special-defense', total: 112, },
-      { name: 'special-attack', total: 74, },
+      { name: 'speed', total: 35 },
+      { name: 'special-defense', total: 112 },
+      { name: 'special-attack', total: 74 },
     ]);
     expect(extractStats(snorlaxStats.stats).length).toStrictEqual(3);
   });

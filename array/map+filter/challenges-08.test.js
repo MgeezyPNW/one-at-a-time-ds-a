@@ -201,7 +201,7 @@ describe('Testing challenge 2', () => {
 
   test('It should not contain any words that do not contain vowels', () => {
     expect(filterStringsWithVowels(['gregor','hound','xyz'])).not.toContain('xyz');
-  })
+  });
 });
 
 describe('Testing challenge 3', () => {
@@ -255,7 +255,7 @@ describe('Testing challenge 5', () => {
       {baseStat: 10, stat: {name: 'one'}},
       {baseStat: -85, stat: {name: 'two'}},
       {baseStat: 0, stat: {name: 'three'}},
-      {baseStat: -50, stat: {name: 'four'}}
+      {baseStat: -50, stat: {name: 'four'}},
     ], -60)).toStrictEqual(['one', 'three', 'four']);
   });
 });

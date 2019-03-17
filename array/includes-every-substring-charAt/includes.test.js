@@ -147,8 +147,6 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 ]
 ------------------------------------------------------------------------------------------------ */
 
-const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
 const sortByDay = (arr) => {
   // Solution code here...
   let schedule = [
@@ -159,7 +157,7 @@ const sortByDay = (arr) => {
     arr.filter(array => array.includes('Friday')),
     arr.filter(array => array.includes('Saturday')),
     arr.filter(array => array.includes('Sunday')),
-  ]
+  ];
   return schedule;
 };
 
@@ -258,13 +256,13 @@ describe('Testing challenge 8', () => {
     const roster = [
       ['Michelle', 'Allie', 'Brook TESTING'],
       ['Brook Riggio', 'hey look it\'s Brook', 'Jennifer'],
-      ['Nicholas', 'Sam', 'Scott', 'Vinicio']
+      ['Nicholas', 'Sam', 'Scott', 'Vinicio'],
     ];
 
     expect(unenrollBrook(roster)).toStrictEqual([
       ['Michelle', 'Allie'],
       ['Jennifer'],
-      ['Nicholas', 'Sam', 'Scott', 'Vinicio']
+      ['Nicholas', 'Sam', 'Scott', 'Vinicio'],
     ]);
     expect(unenrollBrook([['Brook', 'person'], [], ['person', 'person', 'Brook']])).toStrictEqual([['person'], [], ['person', 'person']]);
     expect(unenrollBrook([])).toStrictEqual([]);
@@ -303,4 +301,4 @@ describe('Testing challenge 10', () => {
     expect(characterByIndex(['abc', 'def', 'ghi'])).toStrictEqual(['a', 'e', 'i']);
     expect(characterByIndex(['wow', 'wow', 'wow'])).toStrictEqual(['w', 'o', 'w']);
   });
-});  3
+});

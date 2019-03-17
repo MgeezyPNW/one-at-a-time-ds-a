@@ -114,7 +114,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  let string = "";
+  let string = '';
   for (let i = 0; i < data.length; i++) {
     if (data[i].gender === 'male' || data[i].gender === 'female') {
       if (i === data.length - 1) {
@@ -154,12 +154,12 @@ describe('Testing challenge 1', () => {
   test('It should work on empty arrays', () => {
     expect(count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []])).toStrictEqual(4);
     expect(count(5, [])).toStrictEqual(0);
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
   test('It should add all the numbers in the arrays', () => {
-    const nums = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]];
+    const nums = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6]];
 
     expect(totalSum(nums)).toStrictEqual(66);
   });

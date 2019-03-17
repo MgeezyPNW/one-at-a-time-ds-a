@@ -9,12 +9,12 @@ Then, write a function named speaker that takes in a string and a callback funct
 const greeting = (word) => {
   // Solution code here...
   return word.toUpperCase();
-}
+};
 
 const speaker = (message, callback) => {
   // Solution code here...
   return callback(message).toUpperCase();
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -31,14 +31,14 @@ Return the modified array.
 const addValues = (arr, value) => {
   // Solution code here...
   arr.push(value);
-}
+};
 
 const addNumbers = (num, arr, times, callback) => {
   for (let i = times; 0 < i; i--) {
     callback(arr, num);
   }
   return (arr);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -52,14 +52,14 @@ const removeOne = (num, arr) => {
   if (num % 3 === 2) {
     arr.pop();
   }
-}
+};
 
 const removeElements = (arr, callback) => {
   for (let i = 0; i < arr.length; i++) {
     callback(arr[i], arr);
   }
   return (arr);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -72,7 +72,7 @@ const removeWithForEach = (arr, callback) => {
     callback(value, arr);
   });
   return (arr);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -89,7 +89,7 @@ const removeWithAnon = (arr) => {
     }
   });
   return (arr);
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -107,7 +107,7 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   let list = [];
-  availableItems.forEach(item => { if (item.available === true) { list.push(item.name) } });
+  availableItems.forEach(item => { if (item.available === true) { list.push(item.name); } });
   return list;
 };
 
